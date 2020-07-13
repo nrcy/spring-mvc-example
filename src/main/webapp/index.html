@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>spring-mvc-example</title>
+</head>
+<body>
+<h2>Demo01-入门程序</h2>
+<a href="d1m1">hello world</a>
+<hr />
+<h2>Demo02-获得表单数据</h2>
+<a href="d2m1">验证Demo02是否正常</a>
+<form action="d2m2" method="get">
+	输入：<input type="text" name="name">
+	<input type="submit" value="提交">
+</form>
+<hr />
+<h2>Demo03-url地址参数</h2>
+<a href="d3m1">验证Demo03是否正常</a>
+<input type="text" name="name" id="d3m2-text">
+<button type="button" id="d3m2-btn">点击</button>
+<hr />
+<h2>Demo04-转发,重定向</h2>
+<a href="d4m1">验证Demo04是否正常</a>
+<a href="d4m2">重定向</a>
+<form action="d4m3" method="get">
+	输入：<input type="text" name="name">
+	<input type="submit" value="开始重定向">
+</form>
+<hr />
+<h2>Demo05-cookie</h2>
+<p>此cookie仅1分钟有效</p>
+<a href="d5m1">验证Demo05是否正常</a>
+<form action="d5m2" method="get">
+	设置cookie：<input name="cookie" type="text">
+	<input type="submit" value="单击提交" />
+</form>
+<a href="d5m3">查看cookie</a>
+<script type="text/javascript" src="/js/index.js"></script>
+</body>
+</html>
