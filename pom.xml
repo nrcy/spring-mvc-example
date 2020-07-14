@@ -5,7 +5,7 @@
 	<groupId>top.nrcynet</groupId>
 	<artifactId>springMVCDemo</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.1</version>
+	<version>1.0.1</version>
 	<name>springMVCDemo Maven Webapp</name>
 	<dependencies>
 		<dependency>

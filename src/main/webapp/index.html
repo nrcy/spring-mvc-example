@@ -5,15 +5,22 @@
 <title>spring-mvc-example</title>
 </head>
 <body>
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
 <h2>Demo01-入门程序</h2>
 <a href="d1m1">hello world</a>
 <hr />
 <h2>Demo02-获得表单数据</h2>
 <a href="d2m1">验证Demo02是否正常</a>
 <form action="d2m2" method="get">
-	输入：<input type="text" name="name">
+	输入：<input type="text" name="str01">
 	<input type="submit" value="提交">
 </form>
+
+输入参数01：<input type="text" name="str01" id="d2m3-str01" />
+输入参数02：<input type="text" name="str02" id="d2m3-str02" />
+<button id="d2m3-btn">通过@RequestBody获取参数</button>
+
+
 <hr />
 <h2>Demo03-url地址参数</h2>
 <a href="d3m1">验证Demo03是否正常</a>
@@ -36,6 +43,32 @@
 	<input type="submit" value="单击提交" />
 </form>
 <a href="d5m3">查看cookie</a>
-<script type="text/javascript" src="/js/index.js"></script>
+<hr />
+<h2>Demo06-method</h2>
+<a href="d6m1">验证Demo06是否正常</a>
+<a href="d6m2">get方法</a>
+<form action="d6m3" method="post">
+	<input type="submit" value="开始post方法">
+</form>
+<hr />
+<h2>Demo07-json</h2>
+<a href="d7m1">验证Demo07是否正常</a>
+<br />
+str01:<input  type="text" id="d7m2-text01" />
+str02:<input type="text" id="d7m2-text02"  />
+<button id="d7m2-btn">必须先提交数据</button>
+<br /><a href="d7m3">第一个参数的json</a>
+<br /><a href="d7m4">两个参数的json</a>
+<hr />
+<h2>Demo08-session</h2>
+<a href="d8m1">验证Demo08是否正常</a>
+<form action="d8m2">
+	设置session值：<input type="text" name="session" />
+	<input type="submit" value="提交" />
+</form>
+<a href="d8m3">查看session值</a>
+<hr />
+
+<script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>

@@ -1,11 +1,37 @@
 /**
  * index.html的js文件
  */
-
-window.onload = function(){
-	var d3m2_btn = document.getElementById("d3m2-btn");
-	d3m2_btn.onclick = function(){
-		var d3m2_text = document.getElementById("d3m2-text");
-		window.location.href = "d3m2/" + d3m2_text.value;
+$("#d2m3-btn").click(function(){
+	var jsonData = {
+		"str01":$("#d2m3-str01").val(),
+		"str02":$("#d2m3-str02").val()
 	}
-}
+	$.ajax({
+		type: "post",
+		url: "d2m3",
+		data: JSON.stringify(jsonData),
+		contentType: "application/json;charset=UTF-8",
+		dataType: "json",
+		success: function(data){
+			alert(JSON.stringify(data));
+		}
+	});
+});
+
+$("#d3m2-btn").click(function(){
+	window.location.href = "d3m2/" + $("#d3m2-text").val();
+});
+
+$("#d7m2-btn").click(function(){
+	$.post("d7m2",
+	{
+		"str01": $("#d7m2-text01").val(),
+		"str02":$("#d7m2-text02").val()
+	},function(data){
+		var json = JSON.parse(data);
+		if(json["result"]){
+			alert("数据已提交");
+		}
+	});
+});
+ 
