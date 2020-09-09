@@ -9,15 +9,19 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.fasterxml.jackson.annotation.JsonView;
 
-import top.nrcynet.bean.DataModal;
-import top.nrcynet.bean.DataModal.GetOneParam;
-import top.nrcynet.bean.DataModal.GetTwoParam;
+import top.nrcynet.bean.DataModel;
+import top.nrcynet.bean.DataModel.GetOneParam;
+import top.nrcynet.bean.DataModel.GetTwoParam;
+import top.nrcynet.bean.ResultModel;
 
 @Controller
-public class JsonControllerDemo07 {
+public class Demo07JsonController {
 
 	@Autowired
-	private DataModal dataModal;
+	private DataModel dataModel;
+	
+	@Autowired
+	private ResultModel resultModel;
 	
 	@RequestMapping("d7m1")
 	public String d7m1(){
@@ -26,25 +30,34 @@ public class JsonControllerDemo07 {
 	
 	@RequestMapping(value="d7m2", method=RequestMethod.POST)
 	@ResponseBody
-	public String d7m2(@RequestParam("str01") String str01,
+	@JsonView(ResultModel.GetResult.class)
+	public ResultModel d7m2(@RequestParam("str01") String str01,
 			@RequestParam("str02") String str02) {
-		dataModal.setStr01(str01);
-		dataModal.setStr02(str02);
-		return "{\"result\": \"true\"}";
+		dataModel.setStr01(str01);
+		dataModel.setStr02(str02);
+		resultModel.setObject(dataModel);
+		return resultModel;
  	}
 	
 	
 	@JsonView(GetOneParam.class)
 	@RequestMapping("d7m3")
 	@ResponseBody
-	public DataModal d7m3() {
-		return dataModal;
+	public DataModel d7m3() {
+		return dataModel;
 	}
 
 	@JsonView(GetTwoParam.class)
 	@RequestMapping("d7m4")
 	@ResponseBody
-	public DataModal d7m4() {
-		return dataModal;
+	public DataModel d7m4() {
+		return dataModel;
+	}
+	
+	@RequestMapping("d7m5")
+	@ResponseBody
+	@JsonView(ResultModel.GetDataModel.class)
+	public ResultModel d7m5() {
+		return resultModel;
 	}
 }

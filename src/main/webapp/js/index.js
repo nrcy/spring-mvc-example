@@ -28,8 +28,7 @@ $("#d7m2-btn").click(function(){
 		"str01": $("#d7m2-text01").val(),
 		"str02":$("#d7m2-text02").val()
 	},function(data){
-		var json = JSON.parse(data);
-		if(json["result"]){
+		if(data["result"]){
 			alert("数据已提交");
 		}
 	});

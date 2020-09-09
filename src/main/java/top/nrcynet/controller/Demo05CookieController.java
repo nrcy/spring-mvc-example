@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-public class CookieControllerDemo05 {
+public class Demo05CookieController {
 
 	@RequestMapping("d5m1")
 	public String d5m1() {

@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import com.fasterxml.jackson.annotation.JsonView;
 
 @Component
-public class DataModal {
+public class DataModel {
 
 	private String str01;
 	

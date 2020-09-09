@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttribute;
 
 @Controller
-public class SessionControllerDemo08 {
+public class Demo08SessionController {
 
 	@RequestMapping("d8m1")
 	public String d8m1() {

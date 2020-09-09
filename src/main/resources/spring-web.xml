@@ -24,4 +24,17 @@
 		<property name="suffix" value=".html"></property>
 	</bean>
 
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/demo09/**"/>
+			<bean class="top.nrcynet.intercepter.Demo01Intercepter" />
+		</mvc:interceptor>
+		
+		<mvc:interceptor>
+			<mvc:mapping path="/**"/>
+			<bean class="top.nrcynet.intercepter.Demo02Intercepter" />
+		</mvc:interceptor>
+		
+	</mvc:interceptors>
+
 </beans>

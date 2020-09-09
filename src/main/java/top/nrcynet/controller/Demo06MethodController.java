@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
-public class MethodControllerDemo06 {
+public class Demo06MethodController {
 
 	@RequestMapping("d6m1")
 	public String d6m1() {

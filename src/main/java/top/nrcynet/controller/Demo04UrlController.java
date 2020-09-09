@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class UrlControllerDemo04 {
+public class Demo04UrlController {
 
 	@RequestMapping("d4m1")
 	public String d4m1() {

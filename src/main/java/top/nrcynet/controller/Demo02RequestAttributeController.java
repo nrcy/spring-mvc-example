@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import top.nrcynet.bean.DataModal;
+import top.nrcynet.bean.DataModel;
 
 @Controller
-public class RequestAttributeControllerDemo02 {
+public class Demo02RequestAttributeController {
 
 	@RequestMapping("d2m1")
 	public String d2m1() {
@@ -25,7 +25,7 @@ public class RequestAttributeControllerDemo02 {
 	
 	@RequestMapping("d2m3")
 	@ResponseBody
-	public DataModal d2m3(@RequestBody DataModal dataModal) {
+	public DataModel d2m3(@RequestBody DataModel dataModal) {
 		
 		return dataModal;
 	}
